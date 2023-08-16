@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>网格布局grid</title>
+    <style>
+      #outer {
+        width: 800px;
+        border: 1px #333 solid;
+        padding: 2px;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        /* grid-gap: 10px; */
+      }
+      .box1 {
+        background: pink;
+        height: 100px;
+        grid-column-start: 1;
+        grid-column-end: -1;
+        font-size: 32px;
+        font-weight: bold;
+        line-height: 100px;
+        margin-bottom: 2px;
+        border: 1px #333 solid;
+      }
+      .box2 {
+        background: orange;
+        grid-row-start: 2;
+        grid-row-end: -2;
+        border: 1px #333 solid;
+        margin-right: 2px;
+      }
+      .img {
+        border: 1px #333 solid;
+        grid-column-start: 2;
+        grid-column-end: -1;
+        grid-row-start: 2;
+        grid-row-end: -2;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        border: 1px #333 solid;
+        padding: 2px;
+      }
+      .box3 {
+        background: blue;
+        grid-column-start: 1;
+        grid-column-end: -1;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        border: 1px #333 solid;
+        margin-bottom: 2px;
+      }
+      .box4 {
+        background: yellow;
+        grid-row-start: 4;
+        grid-row-end: -2;
+        border: 1px #333 solid;
+      }
+      .box5 {
+        background: red;
+        grid-row-start: 4;
+        grid-row-end: -2;
+        border: 1px #333 solid;
+        margin: 0 2px;
+      }
+      .box6 {
+        background: skyblue;
+        grid-row-start: 4;
+        grid-row-end: -2;
+        border: 1px #333 solid;
+      }
+      .box7 {
+        margin-top: 2px;
+        background: tomato;
+        grid-column-start: 1;
+        grid-column-end: -1;
+        border: 1px #333 solid;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="outer">
+      <div class="box1">网页的头部</div>
+      <div class="box2">菜单</div>
+      <div class="img">
+        <div class="box3">上半部分</div>
+        <div class="box4">图片</div>
+        <div class="box5">图片</div>
+        <div class="box6">图片</div>
+      </div>
+
+      <div class="box7">底部</div>
+    </div>
+  </body>
+</html>
